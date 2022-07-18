@@ -16,3 +16,5 @@ const submitform = (e, el) => {
     }
     location.href = url;
 };
+
+export default submitform;

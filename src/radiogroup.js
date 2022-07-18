@@ -13,3 +13,5 @@ const changeradio = (e, el) => {
         }
     }
 };
+
+export default changeradio;
