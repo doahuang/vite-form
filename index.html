@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>form</title>
+    </head>
+    <body>
+        <form action="/sch/i.html" onsubmit="submitform(event, this)">
+            <fieldset>
+                <legend>Enter keywords or item number</legend>
+                <div>
+                    <input
+                        name="_nkw"
+                        id="_nkw"
+                        placeholder="Enter keywords or item number"
+                    />
+                </div>
+                <div>
+                    <label for="_sacat">In this category:</label>
+                    <select name="_sacat" id="_sacat">
+                        <option value="0">All Categories</option>
+                        <option value="20081">Antiques</option>
+                        <option value="550">Art</option>
+                        <option value="2984">Baby</option>
+                        <option value="267">Books &amp; Magazines</option>
+                        <option value="12576">Business &amp; Industrial</option>
+                        <option value="625">Cameras &amp; Photo</option>
+                        <option value="15032">
+                            Cell Phones &amp; Accessories
+                        </option>
+                        <option value="11450">
+                            Clothing, Shoes &amp; Accessories
+                        </option>
+                        <option value="11116">Coins &amp; Paper Money</option>
+                        <option value="1">Collectibles</option>
+                        <option value="58058">
+                            Computers/Tablets &amp; Networking
+                        </option>
+                        <option value="293">Consumer Electronics</option>
+                        <option value="14339">Crafts</option>
+                        <option value="237">Dolls &amp; Bears</option>
+                        <option value="6000">eBay Motors</option>
+                        <option value="45100">Entertainment Memorabilia</option>
+                        <option value="172008">Gift Cards &amp; Coupons</option>
+                        <option value="26395">Health &amp; Beauty</option>
+                        <option value="11700">Home &amp; Garden</option>
+                        <option value="281">Jewelry &amp; Watches</option>
+                        <option value="11232">Movies &amp; TV</option>
+                        <option value="11233">Music</option>
+                        <option value="619">
+                            Musical Instruments &amp; Gear
+                        </option>
+                        <option value="1281">Pet Supplies</option>
+                        <option value="870">Pottery &amp; Glass</option>
+                        <option value="10542">Real Estate</option>
+                        <option value="316">Specialty Services</option>
+                        <option value="888">Sporting Goods</option>
+                        <option value="64482">
+                            Sports Mem, Cards &amp; Fan Shop
+                        </option>
+                        <option value="260">Stamps</option>
+                        <option value="1305">Tickets &amp; Experiences</option>
+                        <option value="220">Toys &amp; Hobbies</option>
+                        <option value="3252">Travel</option>
+                        <option value="1249">Video Games &amp; Consoles</option>
+                        <option value="99">Everything Else</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset onchange="changeradio(event, this)">
+                <legend>Buying formats</legend>
+                <div>
+                    <input
+                        type="radio"
+                        name="LH_Auction"
+                        id="LH_Auction"
+                        value="1"
+                    />
+                    <label for="LH_Auction">Auction</label>
+                </div>
+                <div>
+                    <input type="radio" name="LH_BIN" id="LH_BIN" value="1" />
+                    <label for="LH_BIN">Buy It Now</label>
+                </div>
+                <div>
+                    <input type="radio" name="LH_BO" id="LH_BO" value="1" />
+                    <label for="LH_BO">Best offer</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Condition</legend>
+                <div>
+                    <input
+                        type="checkbox"
+                        name="LH_ItemCondition"
+                        id="LH_ItemCondition-1000"
+                        value="1000"
+                    />
+                    <label for="LH_ItemCondition-1000">New</label>
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        name="LH_ItemCondition"
+                        id="LH_ItemCondition-3000"
+                        value="3000"
+                    />
+                    <label for="LH_ItemCondition-3000">Used</label>
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        name="LH_ItemCondition"
+                        id="LH_ItemCondition-10"
+                        value="10"
+                    />
+                    <label for="LH_ItemCondition-10">Not Specified</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Shipping options</legend>
+                <div>
+                    <input type="checkbox" name="LH_FS" id="LH_FS" value="1" />
+                    <label for="LH_FS">New</label>
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        name="LH_LPickup"
+                        id="LH_LPickup"
+                        value="1"
+                    />
+                    <label for="LH_LPickup">Local pickup</label>
+                </div>
+            </fieldset>
+            <fieldset onchange="changeradio(event, this)">
+                <legend>Location</legend>
+                <div>
+                    <input
+                        type="radio"
+                        name="LH_PrefLoc"
+                        id="LH_PrefLoc-99"
+                        value="99"
+                    />
+                    <label for="LH_PrefLoc-99">Located</label>
+                    <select id="_sadis" name="_sadis" disabled>
+                        <option value="10">10</option>
+                        <option selected value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="500">500</option>
+                        <option value="1000">1,000</option>
+                    </select>
+                    <label for="_stpos">miles of</label>
+                    <input
+                        name="_stpos"
+                        id="_stpos"
+                        minlength="5"
+                        maxlength="5"
+                        disabled
+                        required
+                    />
+                </div>
+                <div>
+                    <input type="radio" id="LH_PrefLoc-0" />
+                    <label for="LH_PrefLoc-0">From preferred locations</label>
+                    <select name="LH_PrefLoc" disabled>
+                        <option value="1">US Only</option>
+                        <option value="2">Worldwide</option>
+                        <option value="3">North America</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button type="submit">search</button>
+            <button type="reset">clear</button>
+        </form>
+
+        <script src="/src/form.js"></script>
+        <script src="/src/radiogroup.js"></script>
+    </body>
+</html>
